@@ -1,0 +1,429 @@
+<div class="site-shell" [class.arabic]="isArabic" [class.light-theme]="lightTheme">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Mohamed Emira home"><span>ME<span class="dot">.</span></span></a>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation"><span></span><span></span></button>
+    <nav class="nav-links" [class.open]="menuOpen" aria-label="Main navigation">
+      <a class="active" href="#home" (click)="closeMenu()">{{ isArabic ? 'الرئيسية' : 'Home' }}</a><a href="#about"
+        (click)="closeMenu()">{{ isArabic ? 'عني' : 'About' }}</a><a href="#projects" (click)="closeMenu()">{{ isArabic
+        ? 'المشروعات' : 'Projects' }}</a><a href="#skills" (click)="closeMenu()">{{ isArabic ? 'المهارات' : 'Skills'
+        }}</a><a href="#experience" (click)="closeMenu()">{{ isArabic ? 'الخبرة' : 'Experience' }}</a><a href="#contact"
+        (click)="closeMenu()">{{ isArabic ? 'تواصل' : 'Contact' }}</a>
+    </nav>
+    <div class="header-actions"><button class="theme-toggle" type="button" (click)="toggleTheme()"
+        [attr.aria-label]="lightTheme ? 'Switch to dark theme' : 'Switch to light theme'">{{ lightTheme ? '☾' : '☼'
+        }}</button><button class="language-switch" type="button" (click)="toggleLanguage()">{{ isArabic ? 'AR　|　EN' :
+        'EN　　AR' }}</button><a class="download-button" href="documents/mohamed-emira-cv-.pdf" download><span>↧</span> {{
+        isArabic ? 'تحميل السيرة' : 'Download CV' }}</a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span>{{ isArabic ? 'أهلًا، أنا محمد' : "HELLO, I'M" }}</div>
+        <h1>{{ isArabic ? 'محمد ' : 'Mohamed ' }}<span class="headline-accent">{{ isArabic ? 'عميرة' : 'Emira' }}</span>
+        </h1>
+        <h2>{{ isArabic ? 'مطور واجهات أمامية (Angular)' : 'Front-End Developer (Angular)' }}</h2>
+        <p>{{ isArabic ? 'أبني تطبيقات ويب حديثة ومتجاوبة وقابلة للتوسع باستخدام Angular وTypeScript وتقنيات الواجهات
+          الحديثة، وأحوّل الأفكار المعقدة إلى تجارب استخدام بسيطة وأنيقة.' : 'I build modern, responsive, and scalable
+          web applications using Angular, TypeScript, and modern front-end technologies. I turn complex ideas into
+          simple, elegant, and delightful user experiences.' }}</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">{{ isArabic ? 'شاهد أعمالي' : 'View
+            My Work' }} <span>→</span></a><a class="button button-outline" href="#contact">{{ isArabic ? 'تواصل معي' :
+            "Let's Talk" }} <span>➤</span></a></div>
+
+
+        <div class="social-icons">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mohamed-emira-b66927182/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.3 18H5.8V9.7h2.5ZM7.05 8.55a1.45 1.45 0 1 1 0-2.9 1.45 1.45 0 0 1 0 2.9ZM18.2 18h-2.5v-4c0-.96-.02-2.2-1.34-2.2-1.35 0-1.56 1.05-1.56 2.13V18h-2.5V9.7h2.4v1.13h.04a2.63 2.63 0 0 1 2.36-1.3c2.52 0 2.99 1.66 2.99 3.82Z" />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Mohamed-emira" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+            title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 .1.75 2.08 3.34 1.42.1-.72.4-1.2.72-1.48-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.43.11-2.98 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.55.23 2.7.12 2.98.71.78 1.14 1.78 1.14 3 0 4.29-2.61 5.23-5.1 5.51.4.35.76 1.02.76 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:mohamedemira2525@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-.4 4.2-7 4.8a1 1 0 0 1-1.2 0l-7-4.8V6l8 5.5L20.4 6Z" />
+            </svg>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:0021060793802" aria-label="Call Mohamed" title="Call">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.56 3.58.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.19 2.46.56 3.58a1 1 0 0 1-.25 1.01Z" />
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/21060793802" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+            title="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M20.52 3.48A11.85 11.85 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.29-1.65a11.88 11.88 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9a11.85 11.85 0 0 0-3.46-8.42ZM12.08 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.87 9.87 0 0 1-1.52-5.28c0-5.47 4.45-9.92 9.92-9.92a9.87 9.87 0 0 1 7.02 2.91 9.87 9.87 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.95 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.48-1.78-1.66-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.08-.8.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z" />
+            </svg>
+          </a>
+        </div>
+
+
+      </div>
+      <div class="code-window">
+        <div class="window-header"><span></span><span></span><span></span><b>🔺 app.component.ts</b></div>
+        <pre><span class="code-purple">import</span> &#123; Component &#125; <span class="code-purple">from</span>
+<span class="code-green">'&#64;angular/core'</span>;
+<span class="code-blue">&#64;Component</span>(&#123;
+  selector: <span class="code-green">'app-portfolio'</span>,
+  standalone: <span class="code-yellow">true</span>,
+  templateUrl: <span class="code-green">'./app.component.html'</span>,
+  styleUrl: <span class="code-green">'./app.component.scss'</span>
+&#125;)
+<span class="code-purple">export class</span> <span class="code-blue">AppComponent</span> &#123;
+  name = <span class="code-green">'Mohamed Emira'</span>;
+  role = <span class="code-green">'Front-End Developer'</span>;
+  skills = [<span class="code-green">'Angular'</span>, <span class="code-green">'TypeScript'</span>, <span class="code-green">'UI/UX'</span>];
+&#125;</pre>
+      </div>
+      <div class="portrait-stage">
+        <div class="portrait-orbit orbit-a"></div>
+        <div class="portrait-orbit orbit-b"></div>
+        <div class="portrait-glow"></div><img class="portrait" src="images/mohamed-emira.png"
+          alt="Mohamed Emira, Front-End Developer" />
+        <div class="feature-card feature-code"><span class="feature-icon">&lt;/&gt;</span><span>{{ isArabic ? 'كود نظيف'
+            : 'Clean Code' }}<small>{{ isArabic ? 'واجهات عصرية' : 'Modern UI' }}<br>{{ isArabic ? 'أفضل الممارسات' :
+              'Best Practices' }}</small></span></div>
+        <div class="feature-card feature-scale"><span class="feature-icon">ϟ</span><span>{{ isArabic ? 'تطبيقات قابلة
+            للتوسع' : 'Scalable' }}<small>{{ isArabic ? 'تطبيقات ويب' : 'Web Applications' }}</small></span></div>
+        <div class="feature-card feature-user"><span class="feature-icon">♟</span><span>{{ isArabic ? 'تجربة تتمحور حول
+            المستخدم' : 'User Focused' }}<small>{{ isArabic ? 'تجارب المستخدم' : 'Experiences' }}</small></span></div>
+        <div class="experience-float"><span class="bars">▂▅▇</span><b>3+</b><small>{{ isArabic ? 'سنوات خبرة' : 'Years
+            Experience' }}</small></div>
+      </div>
+      <div class="tech-row">
+        <div class="tech-chip"><b class="angular">A</b><span>Angular</span></div>
+        <div class="tech-chip"><b class="typescript">TS</b><span>TypeScript</span></div>
+        <div class="tech-chip"><b class="html">5</b><span>HTML5</span></div>
+        <div class="tech-chip"><b class="css">3</b><span>CSS3</span></div>
+        <div class="tech-chip"><b class="figma">●</b><span>SCSS</span></div>
+        <div class="tech-chip">
+          <b class="flutter-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#54C5F8" d="M14.5 2 2 14.5l3.9 3.9L24 0H16z" />
+              <path fill="#54C5F8" d="m10.1 18.4 3.9-3.9L24 24h-7.8z" />
+              <path fill="#01579B" d="m6 18.1 3.9-3.9 3.9 3.9-3.9 3.9z" />
+            </svg>
+          </b>
+          <span>Flutter</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stats-bar">
+      <div class="stat"><span class="stat-icon">🏆</span>
+        <div><b>2+</b><small>{{ isArabic ? 'مشروعات رئيسية' : 'Major Projects' }}</small></div>
+      </div>
+      <div class="stat"><span class="stat-icon">♟</span>
+        <div><b>20K+</b><small>{{ isArabic ? 'مستخدم للمنصة' : 'Users Served' }}</small></div>
+      </div>
+      <div class="stat"><span class="stat-icon">▦</span>
+        <div><b>Angular</b><small>{{ isArabic ? 'التقنية الأساسية' : 'Main Stack' }}</small></div>
+      </div>
+      <div class="stat"><span class="stat-icon">★</span>
+        <div><b>100%</b><small>{{ isArabic ? 'شغف بالكود النظيف' : 'Passion for Clean Code' }}</small></div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel about-panel" id="about">
+        <div class="panel-heading">
+          <h2>{{ isArabic ? 'نبذة عني' : 'About Me' }}</h2><span class="heading-line"></span>
+        </div>
+        <div class="about-inner">
+          <p>{{ isArabic ? 'مطور واجهات أمامية بخبرة تزيد عن 3 سنوات في بناء تطبيقات ويب باستخدام Angular وTypeScript
+            وتقنيات الويب الحديثة. أهتم ببناء واجهات سهلة الاستخدام وعالية الأداء وقابلة للوصول.' : "I'm a Front-End
+            Developer with 3+ years of experience building web applications using Angular, TypeScript, and modern
+            front-end technologies. I'm passionate about creating intuitive, high-performance, and accessible user
+            interfaces that solve real problems." }}</p>
+          <div class="personal-details">
+            <div><i>♟</i><span><small>{{ isArabic ? 'الاسم' : 'Name' }}</small><b>Mohamed Emira</b></span></div>
+            <div><i>⌖</i><span><small>{{ isArabic ? 'الموقع' : 'Location' }}</small><b>{{ isArabic ? 'المنصورة، مصر' :
+                  'Mansoura, Egypt' }}</b></span></div>
+            <div><i>✉</i><span><small>Email</small><b>mohamedemira2525&#64;gmail.com</b></span></div>
+            <div><i>▣</i><span><small>{{ isArabic ? 'الحالة' : 'Availability' }}</small><b>{{ isArabic ? 'متاح لفرص
+                  جديدة' : 'Open for new opportunities' }}</b></span></div>
+          </div>
+        </div><a class="small-outline" href="#experience">{{ isArabic ? 'المزيد عني' : 'More About Me' }}　→</a>
+      </article>
+      <article class="panel skills-panel" id="skills">
+        <div class="panel-title-row">
+          <h2>{{ isArabic ? 'مهاراتي' : 'My Skills' }}</h2><a href="#experience">{{ isArabic ? 'عرض الكل' : 'View All'
+            }} →</a>
+        </div>
+    
+<div class="skills-grid">
+  <div><b class="angular">A</b>Angular</div>
+  <div><b class="typescript">TS</b>TypeScript</div>
+  <div><b class="javascript">JS</b>JavaScript</div>
+  <div><b class="react-icon">⚛</b>React</div>
+  <div><b class="next-icon">N</b>Next.js</div>
+  <div><b class="redux-icon">R</b>Redux</div>
+  <div><b class="html">5</b>HTML5</div>
+  <div><b class="css">3</b>CSS3</div>
+  <div><b class="sass">S</b>SCSS</div>
+  <div><b class="bootstrap">B</b>Bootstrap</div>
+  <div><b class="mui">M</b>Material UI</div>
+  <div><b class="api-icon">API</b>REST APIs</div>
+  <div><b class="azure-icon">Az</b>Azure</div>
+  <div><b class="rxjs-icon">Rx</b>RxJS</div>
+<div><b class="json-icon">&#123; &#125;</b>JSON</div>
+  <div><b class="git">◆</b>Git</div>
+  <div><b class="figma">●</b>Figma</div>
+  <div>
+    <b class="flutter-icon" aria-label="Flutter">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#54C5F8" d="M14.5 2 2 14.5l3.9 3.9L24 0H16z"/>
+        <path fill="#54C5F8" d="m10.1 18.4 3.9-3.9L24 24h-7.8z"/>
+        <path fill="#01579B" d="m6 18.1 3.9-3.9 3.9 3.9-3.9 3.9z"/>
+      </svg>
+    </b>
+    Flutter
+  </div>
+</div>
+
+      </article>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="projects-section-heading">
+        <div>
+          <span class="section-kicker">{{ isArabic ? '02 / مشروعات مختارة' : '02 / SELECTED PROJECTS' }}</span>
+          <h2>{{ isArabic ? 'مشروعات تحل مشكلات حقيقية.' : 'Projects built for real-world needs.' }}</h2>
+        </div>
+        <p>{{ isArabic
+          ? 'مجموعة من مشروعات الويب والموبايل التي ساهمت في تطويرها، مع توضيح دوري والتقنيات المستخدمة في كل مشروع.'
+          : 'A selection of web and mobile projects, with a clear overview of my contribution, the key capabilities, and the technologies used.' }}</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="portfolio-project-card" *ngFor="let project of projects; let i = index">
+          <div class="project-image-wrap" [class.project-image-wrap-mobile]="project.imageMode === 'mobile'">
+            <img
+              class="project-image"
+              [src]="project.image"
+              [class.mobile-project-image]="project.imageMode === 'mobile'"
+              [alt]="(isArabic ? project.titleAr : project.titleEn) + (isArabic ? ' — لقطة شاشة من المشروع' : ' — project screenshot')"
+              loading="lazy"
+            />
+            <span class="project-image-label">{{ isArabic ? project.categoryAr : project.categoryEn }}</span>
+            <span class="project-index">{{ i + 1 }}</span>
+          </div>
+
+          <div class="project-card-body">
+            <div class="project-card-heading">
+              <div>
+                <span class="project-type">{{ isArabic ? (project.personal ? 'مشروع شخصي' : 'مشروع مهني') : (project.personal ? 'PERSONAL PROJECT' : 'PROFESSIONAL PROJECT') }}</span>
+                <h3>{{ isArabic ? project.titleAr : project.titleEn }}</h3>
+              </div>
+            </div>
+
+            <p class="project-description">{{ isArabic ? project.descriptionAr : project.descriptionEn }}</p>
+
+            <div
+              class="project-gallery"
+              *ngIf="project.galleryImages?.length"
+              [class.project-gallery-mobile]="project.imageMode === 'mobile'"
+            >
+              <img
+                *ngFor="let galleryImage of project.galleryImages"
+                [src]="galleryImage"
+                [alt]="isArabic ? 'لقطة شاشة إضافية من ' + project.titleAr : 'Additional screenshot from ' + project.titleEn"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-contribution">
+              <span class="project-contribution-label">{{ isArabic ? 'مساهمتي' : 'MY CONTRIBUTION' }}</span>
+              <p>{{ isArabic ? project.contributionAr : project.contributionEn }}</p>
+            </div>
+
+            <div class="project-highlights">
+              <span *ngFor="let highlight of (isArabic ? project.highlightsAr : project.highlightsEn)">{{ highlight }}</span>
+            </div>
+
+            <div class="project-tech-tags">
+              <span *ngFor="let tag of project.tags">{{ tag }}</span>
+            </div>
+
+            <div class="project-card-links">
+              <a
+                *ngIf="project.external"
+                [href]="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-primary-link"
+              >
+                {{ isArabic ? 'زيارة المشروع' : 'Visit project' }} <span>↗</span>
+              </a>
+              <a *ngIf="!project.external" href="#contact" class="project-primary-link">
+                {{ isArabic ? 'مناقشة المشروع' : 'Discuss project' }} <span>↗</span>
+              </a>
+              <a href="https://github.com/Mohamed-emira" target="_blank" rel="noopener noreferrer" class="project-secondary-link">
+                {{ isArabic ? 'ملف GitHub' : 'GitHub profile' }} <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-disclaimer">{{ isArabic
+        ? 'الصور المعروضة لقطات شاشة من مواقع وتطبيقات المشروع كما أرسلتها. قد تتغير الواجهات بمرور الوقت، وتأكد من عدم عرض بيانات دخول أو معلومات خاصة قبل النشر.'
+        : 'These are screenshots supplied from the project websites and mobile app. Interfaces may evolve over time; make sure no credentials or private information are visible before publishing.' }}</p>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="experience-section-heading">
+        <div>
+          <span class="section-kicker">{{ isArabic ? 'الخبرة العملية' : 'PROFESSIONAL EXPERIENCE' }}</span>
+          <h2>{{ isArabic ? 'خبرة عملية في بناء منتجات حقيقية.' : 'Building products that solve real problems.' }}</h2>
+        </div>
+        <p>{{ isArabic
+          ? 'أكثر من 3 سنوات من الخبرة في تطوير واجهات ويب عملية وقابلة للصيانة، مع تركيز أساسي على Angular وTypeScript.'
+          : '3+ years of hands-on front-end experience, focused on building maintainable, responsive web applications with Angular and TypeScript.' }}</p>
+      </div>
+
+      <article class="experience-card">
+        <div class="experience-card-top">
+          <div class="experience-role-group">
+            <div class="experience-company-mark" aria-hidden="true">M</div>
+            <div class="experience-role-copy">
+              <span class="experience-role">Front-End Developer</span>
+              <span class="experience-company">MDD Company <span class="experience-company-separator">·</span> {{ isArabic ? 'مشروعات ويب للسوق السعودي' : 'Web projects for the Saudi market' }}</span>
+            </div>
+          </div>
+          <div class="experience-period">
+            <span class="experience-current-dot"></span>
+            <span>{{ isArabic ? 'يناير 2023 — حتى الآن' : 'Jan 2023 — Present' }}</span>
+            <b>{{ isArabic ? 'أكثر من 3 سنوات' : '3+ YEARS' }}</b>
+          </div>
+        </div>
+
+        <p class="experience-description">{{ isArabic
+          ? 'خلال أكثر من 3 سنوات، ساهمت في تطوير منصة تعليمية متكاملة لمدارس الأحساء في السعودية، تخدم أكثر من 20,000 مستخدم وتضم محتوى تعليميًا ووحدات مخصصة لست لوحات: الإدارة والطالب والمعلم والمشرف  الأكاديمى والمشرف التربوى و ولى الأمر. الواجهة الأمامية مبنية باستخدام Angular وTypeScript وBootstrap وSass، مع خدمات خلفية باستخدام .NET.'
+          : 'Over 3+ years, I have contributed to a large-scale educational platform for Al-Ahsa schools in Saudi Arabia, serving 20,000+ users with rich learning content and dedicated Admin, Student, Teacher,Academic Supervisor and Educational Supervisor dashboards. The web front end uses Angular, TypeScript, Bootstrap, and Sass, supported by a .NET backend.' }}</p>
+
+        <div class="experience-highlights">
+          <div class="experience-highlight">
+            <span class="experience-highlight-number">01</span>
+            <div>
+              <b>{{ isArabic ? 'منصة تعليمية واسعة النطاق' : 'Large-scale education platform' }}</b>
+              <p>{{ isArabic ? 'أربع لوحات متخصصة لإدارة المستخدمين والفصول ومتابعة الأداء والتواصل والجداول.' : 'Four role-based dashboards for user management, class tracking, performance monitoring, communication, and scheduling.' }}</p>
+            </div>
+          </div>
+          <div class="experience-highlight">
+            <span class="experience-highlight-number">02</span>
+            <div>
+              <b>{{ isArabic ? 'اعتماد وزارة التعليم السعودية' : 'Saudi Ministry of Education Accreditation' }}</b>
+              <p>{{ isArabic ? 'المنصة التعليمية حاصلة على اعتماد وزارة التعليم السعودية.' : 'The educational platform has received accreditation from the Saudi Ministry of Education.' }}</p>
+            </div>
+          </div>
+          <div class="experience-highlight">
+            <span class="experience-highlight-number">03</span>
+            <div>
+              <b>{{ isArabic ? 'تطبيق موبايل باستخدام Flutter' : 'Mobile app with Flutter' }}</b>
+              <p>{{ isArabic ? 'المساهمة في تطبيق بناء باستخدام Flutter وDart، وتنفيذ واجهات وWidgets قابلة لإعادة الاستخدام وربط الخصائص التعليمية.' : 'Contributed to the Benaa mobile app with Flutter and Dart, building reusable UI widgets and implementing educational features.' }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card-footer">
+          <div class="experience-tags" aria-label="Core technologies">
+            <span>Angular</span><span>TypeScript</span><span>Bootstrap</span><span>Sass / SCSS</span><span>.NET</span><span>REST APIs</span><span>Flutter</span><span>Dart</span><span>Git</span>
+          </div>
+          <div class="experience-impact">
+            <strong>20K+</strong>
+            <span>{{ isArabic ? 'مستخدم للمنصة التعليمية' : 'users served by the educational platform' }}</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-intro"><span class="eyebrow"><span class="status-dot"></span>{{ isArabic ? 'لنتحدث' : 'GET IN
+          TOUCH' }}</span>
+        <h2>{{ isArabic ? 'هل نعمل معًا؟' : 'Let’s build something great.' }}</h2>
+        <p>{{ isArabic ? 'لو عندك فرصة عمل أو مشروع، ابعتلي رسالة وهرد عليك.' : 'Have a job opportunity or project in
+          mind? Send me a message and I’ll get back to you.' }}</p><a
+          href="mailto:mohamedemira2525@gmail.com">mohamedemira2525&#64;gmail.com ↗</a>
+      </div>
+
+      <form class="contact-form" (submit)="sendMessage($event)">
+        <label>
+          {{ isArabic ? 'اسمك' : 'Your Name' }}
+          <input type="text" name="name" autocomplete="name" required minlength="2"
+            [placeholder]="isArabic ? 'اكتب اسمك' : 'Enter your name'" />
+        </label>
+
+        <label>
+          {{ isArabic ? 'بريدك الإلكتروني' : 'Your Email' }}
+          <input type="email" name="email" autocomplete="email" required
+            [placeholder]="isArabic ? 'بريدك الإلكتروني' : 'you@example.com'" />
+        </label>
+
+        <label>
+          {{ isArabic ? 'الرسالة' : 'Message' }}
+          <textarea name="message" required minlength="10" rows="4"
+            [placeholder]="isArabic ? 'اكتب رسالتك هنا...' : 'Write your message here...'"></textarea>
+        </label>
+
+        <button class="button button-primary send-button" type="submit" [disabled]="sending">
+          {{
+          sending
+          ? (isArabic ? 'جاري الإرسال...' : 'Sending...')
+          : (isArabic ? 'إرسال الرسالة' : 'Send Message')
+          }}
+          <span>➤</span>
+        </button>
+
+
+        <div *ngIf="contactStatus === 'success'" class="contact-success" role="status" aria-live="polite">
+          <span class="success-icon">✓</span>
+          <span>
+            {{
+            isArabic
+            ? 'تم إرسال رسالتك بنجاح!'
+            : 'Your message has been sent successfully!'
+            }}
+          </span>
+        </div>
+
+        <div *ngIf="contactStatus === 'error'" class="contact-error" role="alert">
+          {{
+          isArabic
+          ? 'تعذر إرسال الرسالة. حاول مرة أخرى.'
+          : 'Failed to send your message. Please try again.'
+          }}
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home">ME<span class="dot">.</span></a><span>© 2026 Mohamed Emira · {{
+      isArabic ? 'صُنع بشغف باستخدام Angular' : 'Crafted with Angular' }}</span><a href="#home">{{ isArabic ? 'العودة
+      للأعلى ↑' : 'Back to top ↑' }}</a></footer>
+</div>

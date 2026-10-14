@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  margin: 0;
+  background: #00140f;
+  color: #f4faf8;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #00f0ad;
+  outline-offset: 3px;
+}
+::selection {
+  background: #00f0ad;
+  color: #00251b;
+}
